@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import {
   BrowserRouter, 
   Routes,
@@ -19,8 +18,13 @@ function App() {
         <Route index element={<Home/>}></Route>
         <Route path='login' element={<Login/>}></Route>
         <Route path='user'>
-        <Route index element={<List/>}/>
+          <Route index element={<List/>}/>
           <Route path=':userid' element={<Single/>}/>
+          <Route path='new' element={<New/>}/>
+        </Route>
+        <Route path='products'>
+          <Route index element={<List/>}/>
+          <Route path=':prodid' element={<Single/>}/>
           <Route path='new' element={<New/>}/>
         </Route>
       </Routes>
